@@ -1,4 +1,4 @@
-var balance = 50;
+var balance = prompt("pila imo kwarta?");
 
         function getRandomColor() {
             var colors = ['yellow', 'white', 'violet', 'blue', 'red', 'green'];
@@ -23,11 +23,11 @@ var balance = 50;
             document.getElementById('gameColor').style.backgroundColor = gameColor;
 
             if (chosenColor.toLowerCase() === gameColor) {
-                balance *= 2; // modoble if ma daog
-                alert("yahaya sa boang oi balance: " + balance + " pesos.");
+                balance *= 2;
+                alert("Correct! Your balance: " + balance + " pesos.");
             } else {
-                balance -= 5; // bobo makuhaan skill issue shyt
-                alert("sorry bawi lang sunod balance:" + balance + " pesos.");
+                balance -= 5;
+                alert("Wrong! Try again. Your balance: " + balance + " pesos.");
             }
 
             updateBalance();
