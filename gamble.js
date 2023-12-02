@@ -7,7 +7,17 @@ var balance = 50;
         }
 
         function playGame() {
-            var chosenColor = prompt("Choose a color (yellow, white, violet, blue, red, green):");
+            var chosenColor;
+
+            while (true) {
+                chosenColor = prompt("Choose a color (yellow, white, violet, blue, red, green):");
+
+                if (chosenColor && chosenColor.toLowerCase() === 'yellow' || chosenColor.toLowerCase() === 'white' || chosenColor.toLowerCase() === 'violet' || chosenColor.toLowerCase() === 'blue' || chosenColor.toLowerCase() === 'red' || chosenColor.toLowerCase() === 'green') {
+                    break;
+                } else {
+                    alert("wala sa pili-anan bobo");
+                }
+            }
 
             var gameColor = getRandomColor();
             document.getElementById('gameColor').style.backgroundColor = gameColor;
